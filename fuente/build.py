@@ -24,8 +24,6 @@ REPARTO = [
 PAGINAS = [
     ("index.html", "¿Existe realmente el cambio climático?",
      "Trabajo de Sostenibilidad (UD2): datos de temperatura, CO₂ y glaciares, cómo se verifican, consenso científico, dos posturas y conclusión."),
-    ("guion.html", "Guion de cada integrante | Cambio climático",
-     "Qué explica cada integrante del equipo en el trabajo sobre el cambio climático."),
 ]
 
 UNSPLASH = "https://images.unsplash.com/"
@@ -196,17 +194,17 @@ def foto(clave, pie):
 def encargo(nombre, corto=False):
     n = next(r[0] for r in REPARTO if r[1] == nombre)
     if corto:
-        return f'<strong>{nombre}</strong> (<a href="guion.html#parte-{n}">su guion</a>)'
-    return f'Se encarga <strong>{nombre}</strong> (<a href="guion.html#parte-{n}">su guion</a>)'
+        return f'<strong>{nombre}</strong>'
+    return f'Se encarga <strong>{nombre}</strong>'
 
 
 def reparto():
     filas = []
     for n, nombre, parte, secc in REPARTO:
         enlaces = ", ".join('<a href="#%s">%s</a>' % (i, t) for i, t in secc)
-        filas.append(f'<tr><th scope="row">{nombre}</th><td>{parte}</td><td>{enlaces}</td><td><a href="guion.html#parte-{n}">Guion {n}</a></td></tr>')
+        filas.append(f'<tr><th scope="row">{nombre}</th><td>{parte}</td><td>{enlaces}</td></tr>')
     return ('<div class="tabla"><table><thead><tr><th scope="col">Integrante</th><th scope="col">Parte</th><th scope="col">Secciones</th>'
-            '<th scope="col">Guion</th></tr></thead><tbody>' + "".join(filas) + "</tbody></table></div>")
+            '</tr></thead><tbody>' + "".join(filas) + "</tbody></table></div>")
 
 
 def creditos():
@@ -279,7 +277,7 @@ def main():
         cuerpo = re.sub(r"(\d) °C", r"\1&nbsp;°C", cuerpo)
         cuerpo = apilable(cuerpo)
         if archivo == "index.html":
-            extra, etiqueta = '<a class="barra__guion" href="guion.html">Guion</a>', "Apartados del trabajo"
+            extra, etiqueta = "", "Apartados del trabajo"
         else:
             extra, etiqueta = '<a class="barra__guion" href="index.html">Volver</a>', "Partes del guion"
         html = PLANTILLA.format(titulo=titulo, descripcion=descripcion, fuentes=FUENTES, v=v, nav=navegacion(cuerpo),
