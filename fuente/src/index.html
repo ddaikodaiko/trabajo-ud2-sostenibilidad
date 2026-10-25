@@ -1,0 +1,263 @@
+<header class="portada" id="inicio" data-etapa="Inicio">
+  {{franjas}}
+  <div class="portada__texto">
+    <p class="portada__ciclo">Sostenibilidad. UD2, Retos ambientales y sociales</p>
+    <h1>¿Existe realmente el cambio climático?</h1>
+    <p class="entradilla">Buscamos los datos, cómo se miden y quién los discute, para separar lo que se puede comprobar de lo que es opinión. Al final damos nuestra respuesta.</p>
+    <p class="equipo">Equipo: <strong>Marcos Ramos</strong>, <strong>Gonzalo Redondo</strong>, <strong>Jaime Ramos</strong> y <strong>Victor Cerveros</strong></p>
+  </div>
+</header>
+
+<section class="seccion" id="definicion" data-etapa="Definición">
+  <p class="seccion__n">1</p>
+  <h2>Qué entendemos por cambio climático</h2>
+  <p class="encargo">{{encargo:Marcos Ramos}}</p>
+
+  <blockquote class="definicion">
+    <p>Es un cambio <strong>a largo plazo</strong> de las temperaturas y de los patrones del clima. Puede tener causas naturales, como la actividad del Sol o las grandes erupciones volcánicas, o humanas, sobre todo la quema de carbón, petróleo y gas.</p>
+    <footer>Definición del equipo a partir de la de <a href="https://www.un.org/es/climatechange/what-is-climate-change">Naciones Unidas</a>.</footer>
+  </blockquote>
+
+  <div class="dos">
+    <div class="tarjeta">
+      <h3>El tiempo no es el clima</h3>
+      <p>Un invierno frío o un verano suave no prueban ni desmienten nada. El clima se mide con medias de décadas: por eso AEMET compara cada año con el periodo 1991-2020.</p>
+    </div>
+    <div class="tarjeta">
+      <h3>Dos preguntas distintas</h3>
+      <p>Una es si el clima está cambiando. Otra, por qué. Muchas discusiones mezclan las dos, y conviene contestarlas por separado.</p>
+    </div>
+  </div>
+
+  <h3 class="h-bloque">Qué lo demostraría</h3>
+  <p>Antes de mirar los datos decidimos qué tendríamos que encontrar para aceptar que está ocurriendo y que lo causamos nosotros:</p>
+  <ol class="pruebas">
+    <li><strong>Que la temperatura media global suba durante décadas,</strong> y que lo confirmen análisis hechos por equipos distintos.</li>
+    <li><strong>Que aumente la causa propuesta:</strong> los gases de efecto invernadero, sobre todo el CO₂.</li>
+    <li><strong>Que haya efectos físicos coherentes con el calor,</strong> como glaciares que pierden hielo o un mar que sube.</li>
+    <li><strong>Que se puedan descartar las causas naturales</strong> que conocemos, como el Sol o los ciclos de la órbita terrestre.</li>
+  </ol>
+  <p class="nota">Los tres primeros puntos los comprobamos en el apartado 2; el cuarto, en el 4.</p>
+</section>
+
+<section class="seccion" id="evidencias" data-etapa="Evidencias">
+  <p class="seccion__n">2</p>
+  <h2>Tres indicadores, con datos reales</h2>
+  <p class="encargo">{{encargo:Marcos Ramos}} el indicador de temperatura; {{encargo-corto:Gonzalo Redondo}} los de CO₂ y glaciares.</p>
+  <p>Elegimos tres indicadores que se miden de forma independiente entre sí: si los tres apuntan en la misma dirección, es difícil que sea casualidad o un error de un solo instrumento.</p>
+
+  <article class="indicador" id="ind-temperatura">
+    <p class="indicador__n">Indicador 1</p>
+    <h3>La temperatura media del planeta</h3>
+    {{grafico:temperatura}}
+    <ul class="claves">
+      <li><b>10 de 10</b> Los diez años más cálidos desde 1880 son todos de 2015 en adelante.</li>
+      <li><b>+1,28 °C</b> 2024 fue el récord: 1,28 °C por encima de la media de 1951-1980.</li>
+      <li><b>≈1,3 °C</b> de diferencia entre la media de 1880-1909 y la de 2016-2025.</li>
+    </ul>
+    <p class="lectura"><strong>Qué muestra:</strong> la temperatura sube y baja de un año a otro (2025 fue algo más fresco que 2024), pero la tendencia de fondo es claramente ascendente desde los años 70. <strong>Respalda</strong> la existencia del cambio climático.</p>
+    <p class="fuente">Datos: <a href="https://data.giss.nasa.gov/gistemp/">NASA GISS, índice GISTEMP</a>, descargados del paquete abierto <a href="https://github.com/datasets/global-temp">datasets/global-temp</a>. Récord de 2024 confirmado por <a href="https://www.nasa.gov/news-release/temperatures-rising-nasa-confirms-2024-warmest-year-on-record">NASA</a>. La diferencia entre periodos es cálculo propio.</p>
+  </article>
+
+  <article class="indicador" id="ind-co2">
+    <p class="indicador__n">Indicador 2</p>
+    <h3>El CO₂ en la atmósfera</h3>
+    {{grafico:co2}}
+    <ul class="claves">
+      <li><b>316 → 427</b> partes por millón entre 1959 y 2025 en Mauna Loa (Hawái): un 35 % más.</li>
+      <li><b>×3</b> Crece cada vez más rápido: 0,9 ppm al año en los 60 y 2,6 ppm al año en la última década.</li>
+      <li><b>2 millones</b> de años: el IPCC indica que en 2019 el CO₂ ya estaba más alto que en todo ese tiempo.</li>
+    </ul>
+    <p class="lectura"><strong>Qué muestra:</strong> la causa que se propone para el calentamiento no deja de aumentar. Por sí solo no prueba que el planeta se caliente, pero encaja con el indicador 1. <strong>Respalda</strong> la explicación humana.</p>
+    <p class="fuente">Datos: <a href="https://gml.noaa.gov/ccgg/trends/">NOAA, Laboratorio de Monitorización Global</a>, media anual de Mauna Loa, vía <a href="https://github.com/datasets/co2-ppm">datasets/co2-ppm</a>. Dato de los 2 millones de años: <a href="https://www.ipcc.ch/report/ar6/wg1/chapter/summary-for-policymakers/">IPCC AR6, resumen, A.2.1</a>. Ritmos de crecimiento: cálculo propio.</p>
+  </article>
+
+  <article class="indicador" id="ind-glaciares">
+    <p class="indicador__n">Indicador 3</p>
+    <h3>El hielo de los glaciares</h3>
+    {{grafico:glaciares}}
+    <ul class="claves">
+      <li><b>−29,7 m</b> Los glaciares de referencia han perdido desde 1956 el equivalente a una capa de agua de casi 30 metros de espesor.</li>
+      <li><b>×3</b> En la última década perdieron tres veces más que en la primera (−9 m frente a −2,8 m).</li>
+      <li><b>5 %</b> del hielo de todos los glaciares del mundo se ha perdido desde 2000; en Europa central, el 39 %.</li>
+    </ul>
+    <p class="lectura"><strong>Qué muestra:</strong> un efecto físico del calor, medido con métodos distintos a los termómetros, y que además se acelera. <strong>Respalda</strong> la existencia del cambio climático.</p>
+    <p class="fuente">Datos: balance de masa de los glaciares de referencia del <a href="https://wgms.ch/">Servicio Mundial de Vigilancia de Glaciares (WGMS)</a> recopilado por la <a href="https://www.epa.gov/climate-indicators/climate-change-indicators-glaciers">EPA de EE. UU.</a>, vía <a href="https://github.com/datasets/glacier-mass-balance">datasets/glacier-mass-balance</a>. Pérdida mundial: estudio <a href="https://geo.uzh.ch/en/units/wgms/news/glambie.html">GlaMBIE, Nature (2025)</a>. Comparación de décadas: cálculo propio.</p>
+  </article>
+  {{foto:glaciar|Un glaciar en el Parque Nacional de Kenai Fjords, en Alaska}}
+
+  <aside class="espana">
+    <h3>Y en España</h3>
+    <p>2024 fue el tercer año más cálido desde 1961 en la España peninsular, 1,1 °C por encima de la media de 1991-2020. Los diez años más cálidos de la serie son todos del siglo XXI.</p>
+    <p class="fuente">Fuente: <a href="https://www.miteco.gob.es/es/prensa/ultimas-noticias/2025/enero/2024-fue-el-tercer-ano-mas-calido-de-la-serie-historica-en-espan.html">AEMET, a través del Ministerio para la Transición Ecológica (20 de enero de 2025)</a>.</p>
+  </aside>
+</section>
+
+<section class="seccion" id="analisis" data-etapa="Análisis crítico">
+  <p class="seccion__n">3</p>
+  <h2>Análisis crítico</h2>
+  <p class="encargo">{{encargo:Jaime Ramos}}</p>
+
+  <h3 class="h-bloque">Cómo se recogen y se comprueban los datos</h3>
+  <div class="tabla">
+    <table>
+      <thead><tr><th scope="col">Indicador</th><th scope="col">Cómo se mide</th><th scope="col">Cómo se comprueba</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Temperatura</th><td>Decenas de miles de estaciones meteorológicas en tierra, y barcos y boyas en el mar.</td><td>Se corrige el reparto desigual de estaciones y el calor de las ciudades. Cinco análisis distintos (NASA, NOAA, Berkeley Earth, Met Office y Copernicus) llegan a la misma tendencia con métodos diferentes.</td></tr>
+        <tr><th scope="row">CO₂</th><td>Un analizador láser en el observatorio de Mauna Loa, lejos de fuentes locales, con el aire previamente secado.</td><td>Se calibra cada dos semanas con cinco gases de concentración conocida y cada hora con uno de referencia. Las horas dudosas se marcan, no se borran. La Institución Scripps mide en paralelo con su propio método: entre 1974 y 2019 la diferencia media fue de 0,07 ppm.</td></tr>
+        <tr><th scope="row">Glaciares</th><td>Mediciones sobre el terreno del hielo ganado y perdido cada año, y observaciones desde satélite.</td><td>El estudio GlaMBIE juntó 35 equipos y unos 450 colaboradores y combinó campo con cuatro tipos de satélite (ópticos, radar, láser y gravedad) para que unas medidas comprueben otras.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="fuente">Fuentes: <a href="https://www.nasa.gov/news-release/temperatures-rising-nasa-confirms-2024-warmest-year-on-record">NASA (10 de enero de 2025)</a>, <a href="https://gml.noaa.gov/ccgg/about/co2_measurements.html">NOAA, “How CO₂ is measured”</a> y <a href="https://geo.uzh.ch/en/units/wgms/news/glambie.html">Universidad de Zúrich, WGMS (20 de febrero de 2025)</a>.</p>
+
+  <h3 class="h-bloque">¿Hay consenso científico?</h3>
+  <div class="consenso">
+    <div class="cifra"><b>99,9 %</b><span>de 88.125 artículos científicos revisados (2012-2020) coincide en que el cambio climático actual es sobre todo humano. Solo 28 lo ponían en duda, todos en revistas menores.</span></div>
+    <div class="cifra"><b>234</b><span>autores escribieron el informe del IPCC de 2021, basado en más de 14.000 estudios y revisado con más de 78.000 comentarios.</span></div>
+  </div>
+  <p class="fuente">Fuentes: <a href="https://news.cornell.edu/stories/2021/10/more-999-studies-agree-humans-caused-climate-change">Universidad de Cornell sobre Lynas y otros, Environmental Research Letters (19 de octubre de 2021)</a> e <a href="https://www.ipcc.ch/report/ar6/wg1/resources/press">IPCC, AR6 Grupo de Trabajo I</a>.</p>
+  <div class="dos">
+    <div class="tarjeta tarjeta--si">
+      <h4>En qué hay acuerdo</h4>
+      <p>Que el planeta se calienta y que la causa principal es humana. El IPCC lo califica de “inequívoco”.</p>
+    </div>
+    <div class="tarjeta tarjeta--debate">
+      <h4>Qué sigue en debate entre científicos</h4>
+      <p>Cuánto se calentará exactamente: si se duplica el CO₂, entre 2,5 y 4 °C, con 3 °C como mejor estimación. Y el peso del ser humano en algunos fenómenos extremos concretos, que el IPCC valora con distinto nivel de confianza según el tipo y la región.</p>
+    </div>
+  </div>
+  <p>Las discrepancias reales están en el <strong>cuánto</strong> y el <strong>dónde</strong>, no en el <strong>si</strong>.</p>
+
+  <h3 class="h-bloque">Hecho comprobable u opinión</h3>
+  <div class="criterio">
+    <div><span class="etq etq--hecho">Hecho</span><p>Se puede medir, tiene un método público, otros pueden repetirlo y lleva su margen de error.</p></div>
+    <div><span class="etq etq--opinion">Opinión</span><p>Valora, califica o propone qué hacer. Puede estar bien o mal argumentada, pero no se mide con un termómetro.</p></div>
+  </div>
+  <p>Lo aplicamos a titulares reales de medios con distinta línea editorial. En los dos lados hay datos ciertos mezclados con interpretación.</p>
+  <div class="tabla tabla--titulares">
+    <table>
+      <thead><tr><th scope="col">Titular</th><th scope="col">El hecho que contiene</th><th scope="col">Lo que añade el medio</th></tr></thead>
+      <tbody>
+        <tr><th scope="row"><q>2024 será el año más caluroso de la historia jamás registrado</q><span><a href="https://es.euronews.com/2024/11/07/2024-sera-el-ano-mas-caluroso-de-la-historia-jamas-registrado">Euronews, 7 de noviembre de 2024</a></span></th><td><span class="etq etq--hecho">Hecho</span> 2024 batió el récord, como confirmaron después NASA y Copernicus.</td><td><span class="etq etq--opinion">Exageración</span> “De la historia”: los registros fiables empiezan en el siglo XIX.</td></tr>
+        <tr><th scope="row"><q>2024 será el primer año en superar umbral de 1,5 °C de calentamiento climático</q><span><a href="https://www.teletica.com/amp/internacional/2024-sera-el-primer-ano-en-superar-umbral-de-15-0c-de-calentamiento-climatico_373667">AFP en Teletica, 9 de diciembre de 2024</a></span></th><td><span class="etq etq--hecho">Hecho</span> Copernicus midió 1,60 °C sobre la era preindustrial.</td><td><span class="etq etq--opinion">Matiz que falta</span> Copernicus aclara que no supone romper el límite de París, que se mide en medias de al menos 20 años.</td></tr>
+        <tr><th scope="row"><q>Nature vuelve a romper el relato climático: el aumento del CO₂ impulsa el crecimiento de la Amazonía</q><span><a href="https://www.libertaddigital.com/ciencia-tecnologia/ciencia/2025-10-11/nature-vuelve-a-romper-el-relato-climatico-el-aumento-del-co2-impulsa-el-crecimiento-de-la-amazonia-7305991/">Libertad Digital, 11 de octubre de 2025</a></span></th><td><span class="etq etq--hecho">Hecho</span> Cita un estudio publicado en la revista Nature.</td><td><span class="etq etq--opinion">Opinión</span> “Romper el relato”: que el CO₂ haga crecer más las plantas no dice nada sobre si calienta el planeta. Son preguntas distintas.</td></tr>
+        <tr><th scope="row"><q>La gran estafa de la subida del nivel del mar, al descubierto</q><span><a href="https://www.libertaddigital.com/ciencia-tecnologia/ciencia/2025-09-11/un-estudio-hecho-por-ingenieros-desmonta-el-alarmismo-climatico-sobre-la-subida-del-nivel-del-mar-7294163/">Libertad Digital, 11 de septiembre de 2025</a></span></th><td><span class="etq etq--hecho">Dato medido</span> Según la EPA, el nivel medio del mar ha subido unos 26 cm desde 1880.</td><td><span class="etq etq--opinion">Opinión</span> “Estafa” es un juicio, no una medida. Discutir cuánto subirá es legítimo; negar lo medido, no.</td></tr>
+        <tr><th scope="row"><q>La AEMET baja los umbrales de temperatura para poder declarar más alertas por calor extremo</q><span>Libertad Digital, agosto de 2024, según <a href="https://www.publico.es/tremending/contundente-hilo-aemet-desmonta-informacion-libertad-digital.amp.html">Público</a></span></th><td><span class="etq etq--opinion">No verificado</span> AEMET respondió en menos de 24 horas que la información era “rotundamente falsa”.</td><td><span class="etq etq--opinion">Opinión</span> Atribuye una intención (“para poder declarar más alertas”) sin aportar pruebas.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="fuente">Subida del nivel del mar: serie de la <a href="https://github.com/datasets/sea-level-rise">EPA con datos de CSIRO y NOAA</a> (10,2 pulgadas en 2023 respecto a 1880; conversión propia). Copernicus: <a href="https://climate.copernicus.eu/copernicus-2024-first-year-exceed-15degc-above-pre-industrial-level">nota del 10 de enero de 2025</a>.</p>
+  {{foto:periodicos|Los titulares mezclan datos e interpretación: hay que separarlos}}
+</section>
+
+<section class="seccion" id="posturas" data-etapa="Dos posturas">
+  <p class="seccion__n">4</p>
+  <h2>Dos posturas enfrentadas</h2>
+  <p class="encargo">{{encargo:Victor Cerveros}}</p>
+  <p>Comparar dos posturas no significa que pesen lo mismo. Valoramos quién las firma, en qué se apoyan y si explican lo que se mide.</p>
+
+  <div class="posturas">
+    <article class="postura postura--a">
+      <p class="postura__marca">Postura A</p>
+      <h3>Es real y lo causamos los humanos</h3>
+      <p class="postura__quien">Representada por el <strong>IPCC</strong>, el panel científico de la ONU (6.º informe, 2021).</p>
+      <ul>
+        <li>Es “inequívoco” que la influencia humana ha calentado la atmósfera, el océano y la tierra.</li>
+        <li>Entre 1850-1900 y 2011-2020 la superficie se calentó 1,09 °C. La parte causada por el ser humano hasta 2010-2019 está probablemente entre 0,8 y 1,3 °C: prácticamente todo.</li>
+        <li>Es “prácticamente seguro” que las olas de calor son más frecuentes e intensas.</li>
+      </ul>
+    </article>
+    <article class="postura postura--b">
+      <p class="postura__marca">Postura B</p>
+      <h3>Hay causas naturales y no hay emergencia</h3>
+      <p class="postura__quien">Representada por la <strong>Declaración Mundial sobre el Clima</strong> de la fundación neerlandesa CLINTEL (2019, actualizada en 2024).</p>
+      <ul>
+        <li>“Tanto factores naturales como humanos causan calentamiento”; el clima ya cambió antes, por ejemplo al acabar la Pequeña Edad de Hielo.</li>
+        <li>Los modelos climáticos “no son ni remotamente plausibles” como herramienta política.</li>
+        <li>El CO₂ es “alimento para las plantas” y no hay pruebas estadísticas de más desastres. Conclusión: “No hay emergencia climática”.</li>
+      </ul>
+    </article>
+  </div>
+  <p class="fuente">Fuentes: <a href="https://www.ipcc.ch/report/ar6/wg1/chapter/summary-for-policymakers/">IPCC AR6, resumen para responsables de políticas (A.1, A.1.2, A.1.3 y A.3.1)</a> y <a href="https://modgov.sefton.gov.uk/documents/s125305/Clintel-Declaration_2019.pdf">texto de la Declaración de CLINTEL</a>, citas traducidas por el equipo.</p>
+
+  <h3 class="h-bloque">¿Cuál es más fiable?</h3>
+  <div class="tabla tabla--fiabilidad">
+    <table>
+      <thead><tr><th scope="col">Criterio</th><th scope="col">Postura A: IPCC</th><th scope="col">Postura B: CLINTEL</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Quién lo firma</th><td class="mejor">234 autores especialistas en clima de distintos países.</td><td class="peor">Más de 1.100 firmantes en 2022, según expertos que revisaron la lista, sobre todo ingenieros, médicos y geólogos del petróleo, y casi ningún climatólogo.</td></tr>
+        <tr><th scope="row">Revisión</th><td class="mejor">Revisión abierta con más de 78.000 comentarios.</td><td class="peor">Es una declaración: no pasa revisión científica.</td></tr>
+        <tr><th scope="row">En qué se apoya</th><td class="mejor">Más de 14.000 estudios publicados y series de datos públicas.</td><td class="peor">No aporta series de datos propias.</td></tr>
+        <tr><th scope="row">¿Explica lo medido?</th><td class="mejor">Sí: el CO₂ sube, la superficie se calienta y la estratosfera se enfría, que es la huella de los gases de efecto invernadero.</td><td class="peor">No: la energía del Sol no ha aumentado desde los años 50, y los ciclos de la órbita actúan en decenas de miles de años y ahora apuntarían a enfriar.</td></tr>
+        <tr><th scope="row">Conflictos de interés</th><td class="mejor">Proceso público: autores propuestos por gobiernos y organizaciones y seleccionados por el propio IPCC.</td><td class="peor">La organización DeSmog le atribuye vínculos con intereses fósiles y con laboratorios de ideas como el Heartland Institute.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="fuente">Fuentes: <a href="https://insideclimatenews.org/news/23082022/experts-debunk-viral-post-claiming-1100-scientists-say-theres-no-climate-emergency/">Inside Climate News (23 de agosto de 2022)</a>, <a href="https://science.nasa.gov/climate-change/faq/is-the-sun-causing-global-warming">NASA, “¿Es el Sol la causa del calentamiento?”</a> y <a href="https://science.nasa.gov/learn/heat/resource/why-milankovitch-orbital-cycles-cant-explain-earths-current-warming/">NASA, ciclos de Milankovitch</a>.</p>
+
+  <div class="matiz">
+    <h3>Lo que la postura B tiene de cierto</h3>
+    <p>El clima ha cambiado antes por causas naturales, el CO₂ favorece el crecimiento de las plantas y los modelos tienen incertidumbre. Ninguna de esas tres cosas contradice que el calentamiento actual sea humano: son hechos ciertos usados para una conclusión que los datos no sostienen.</p>
+  </div>
+</section>
+
+<section class="seccion" id="conclusion" data-etapa="Conclusión">
+  <p class="seccion__n">5</p>
+  <h2>¿Se puede demostrar científicamente?</h2>
+  <p class="encargo">{{encargo:Victor Cerveros}}</p>
+
+  <p class="respuesta"><strong>Sí.</strong> No como un teorema de matemáticas, sino como se demuestra algo en ciencia: con pruebas independientes que apuntan a lo mismo.</p>
+
+  <ol class="cierre">
+    <li><span class="etq etq--hecho">Demostrado</span> <strong>Que existe.</strong> Termómetros, satélites, glaciares y mar, medidos por equipos distintos, coinciden. Cumple los tres primeros puntos que nos pusimos en el apartado 1.</li>
+    <li><span class="etq etq--hecho">Demostrado con confianza muy alta</span> <strong>Que es humano.</strong> La causa propuesta crece al ritmo que esperaríamos, deja su huella en la estratosfera y las causas naturales conocidas no lo explican. Cumple el cuarto punto.</li>
+    <li><span class="etq etq--debate">Aún abierto</span> <strong>Cuánto y dónde.</strong> La cifra exacta de calentamiento futuro y el efecto en cada región siguen en estudio. Es una duda científica, no una opinión.</li>
+    <li><span class="etq etq--opinion">Opinión</span> <strong>Qué hacer.</strong> Cuánto invertir, a qué ritmo o qué sacrificar son decisiones políticas. Ahí sí caben posturas distintas.</li>
+  </ol>
+  <blockquote class="definicion definicion--cierre">
+    <p>Al empezar pensábamos que esto era un debate de dos opiniones. Después de mirar cómo se miden los datos, vemos que la discusión honesta no es si el cambio climático existe, sino cuánto y qué hacemos con ello.</p>
+  </blockquote>
+</section>
+
+<section class="seccion" id="fuentes" data-etapa="Fuentes">
+  <p class="seccion__n">6</p>
+  <h2>Fuentes, equipo y uso de IA</h2>
+
+  <h3 class="h-sub">Quién se encarga de cada parte</h3>
+  {{reparto}}
+  <p>Cada integrante revisa su parte con las fuentes enlazadas y la explica. El <a href="guion.html">guion de cada integrante</a> recoge qué presenta cada uno.</p>
+
+  <h3 class="h-sub">Uso de inteligencia artificial</h3>
+  <p class="ia">Hemos usado un asistente de IA para buscar y resumir fuentes, descargar y calcular los datos de los gráficos, redactar borradores de los textos y programar la web. Todas las cifras llevan enlace a su fuente y los datos de los gráficos se pueden descargar abajo para comprobarlos.</p>
+
+  <h3 class="h-sub">Datos de los gráficos</h3>
+  <ul class="descargas">
+    <li><a href="datos/temperatura-gistemp.csv" download>Temperatura, NASA GISTEMP (CSV)</a></li>
+    <li><a href="datos/co2-mauna-loa.csv" download>CO₂, NOAA Mauna Loa (CSV)</a></li>
+    <li><a href="datos/glaciares-referencia.csv" download>Glaciares de referencia, WGMS y EPA (CSV)</a></li>
+  </ul>
+
+  <h3 class="h-sub">Fuentes consultadas</h3>
+  <p class="nota">Consultadas el 25 de octubre de 2026. Además, los apuntes de la UD2.</p>
+  <ol class="refs">
+    <li>IPCC (2021). <a href="https://www.ipcc.ch/report/ar6/wg1/chapter/summary-for-policymakers/">Climate Change 2021: The Physical Science Basis. Resumen para responsables de políticas</a>.</li>
+    <li>IPCC. <a href="https://www.ipcc.ch/report/ar6/wg1/resources/press">AR6 Grupo de Trabajo I, materiales de prensa</a>.</li>
+    <li>Naciones Unidas. <a href="https://www.un.org/es/climatechange/what-is-climate-change">¿Qué es el cambio climático?</a></li>
+    <li>NASA GISS. <a href="https://data.giss.nasa.gov/gistemp/">GISS Surface Temperature Analysis (GISTEMP)</a>.</li>
+    <li>NASA (10 de enero de 2025). <a href="https://www.nasa.gov/news-release/temperatures-rising-nasa-confirms-2024-warmest-year-on-record">Temperatures Rising: NASA Confirms 2024 Warmest Year on Record</a>.</li>
+    <li>NOAA Global Monitoring Laboratory. <a href="https://gml.noaa.gov/ccgg/trends/">Trends in Atmospheric Carbon Dioxide</a> y <a href="https://gml.noaa.gov/ccgg/about/co2_measurements.html">How CO₂ is measured</a>.</li>
+    <li>EPA. <a href="https://www.epa.gov/climate-indicators/climate-change-indicators-glaciers">Climate Change Indicators: Glaciers</a>.</li>
+    <li>Universidad de Zúrich, WGMS (20 de febrero de 2025). <a href="https://geo.uzh.ch/en/units/wgms/news/glambie.html">Resultados del estudio GlaMBIE, Nature</a>.</li>
+    <li>Paquetes de datos abiertos: <a href="https://github.com/datasets/global-temp">global-temp</a>, <a href="https://github.com/datasets/co2-ppm">co2-ppm</a>, <a href="https://github.com/datasets/glacier-mass-balance">glacier-mass-balance</a> y <a href="https://github.com/datasets/sea-level-rise">sea-level-rise</a>.</li>
+    <li>Ministerio para la Transición Ecológica (20 de enero de 2025). <a href="https://www.miteco.gob.es/es/prensa/ultimas-noticias/2025/enero/2024-fue-el-tercer-ano-mas-calido-de-la-serie-historica-en-espan.html">2024 fue el tercer año más cálido de la serie histórica en España</a>.</li>
+    <li>Copernicus (10 de enero de 2025). <a href="https://climate.copernicus.eu/copernicus-2024-first-year-exceed-15degc-above-pre-industrial-level">2024 first year to exceed 1.5 °C above pre-industrial level</a>.</li>
+    <li>Universidad de Cornell (2021). <a href="https://news.cornell.edu/stories/2021/10/more-999-studies-agree-humans-caused-climate-change">More than 99.9% of studies agree: Humans caused climate change</a>.</li>
+    <li>CLINTEL. <a href="https://modgov.sefton.gov.uk/documents/s125305/Clintel-Declaration_2019.pdf">World Climate Declaration: There is no climate emergency</a>.</li>
+    <li>Inside Climate News (23 de agosto de 2022). <a href="https://insideclimatenews.org/news/23082022/experts-debunk-viral-post-claiming-1100-scientists-say-theres-no-climate-emergency/">Experts Debunk Viral Post Claiming 1,100 Scientists Say ‘There’s No Climate Emergency’</a>.</li>
+    <li>NASA. <a href="https://science.nasa.gov/climate-change/faq/is-the-sun-causing-global-warming">Is the Sun causing global warming?</a> y <a href="https://science.nasa.gov/learn/heat/resource/why-milankovitch-orbital-cycles-cant-explain-earths-current-warming/">Why Milankovitch (orbital) cycles can’t explain Earth’s current warming</a>.</li>
+    <li>Titulares analizados: <a href="https://es.euronews.com/2024/11/07/2024-sera-el-ano-mas-caluroso-de-la-historia-jamas-registrado">Euronews</a>, <a href="https://www.teletica.com/amp/internacional/2024-sera-el-primer-ano-en-superar-umbral-de-15-0c-de-calentamiento-climatico_373667">AFP en Teletica</a>, <a href="https://www.libertaddigital.com/temas/cambio-climatico/20.html">Libertad Digital</a> y <a href="https://www.publico.es/tremending/contundente-hilo-aemet-desmonta-informacion-libertad-digital.amp.html">Público</a>.</li>
+  </ol>
+  <p class="nota">Las franjas de la portada siguen la idea de las <a href="https://showyourstripes.info/">“warming stripes” de Ed Hawkins</a>, dibujadas por el equipo con los datos de NASA.</p>
+  {{creditos}}
+</section>
